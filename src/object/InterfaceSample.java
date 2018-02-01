@@ -1,0 +1,23 @@
+package object;
+
+public class InterfaceSample {
+
+	public static void main(String[] args) {
+
+		InterfaceEmployee emp01 = new EmployeeSalesInterface();
+		InterfaceEmployee emp02 = new EmployeeSystemInterface();
+
+		emp01.greeting();
+		emp02.greeting();
+
+		newGreeting(emp01);
+		newGreeting(emp02);
+
+	}
+
+	static void newGreeting(InterfaceEmployee ie){
+		System.out.println("ポリモルフィズムです");
+		ie.greeting();
+	}
+
+}
